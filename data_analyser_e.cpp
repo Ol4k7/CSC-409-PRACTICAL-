@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include <limits> // Required for clearing the input buffer
+#include <limits> 
 
 class StatsAnalyzer {
 private:
@@ -39,7 +39,6 @@ int main() {
             sa.addValue(temp);
             count++;
         } else {
-            // This fix handles the "0.2 average" bug by clearing bad input
             std::cout << "Invalid input. Please enter a whole number." << std::endl;
             std::cin.clear(); 
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
